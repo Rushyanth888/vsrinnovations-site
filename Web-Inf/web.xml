@@ -1,0 +1,24 @@
+<web-app>
+  <servlet>
+
+    <servlet-name>login</servlet-name>
+    <servlet-class>loginservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>register</servlet-name>
+    <servlet-class>registerservlet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+
+    <servlet-name>login</servlet-name>
+    <url-pattern>/loginservlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+
+    <servlet-name>register</servlet-name>
+    <url-pattern>/registerservlet</url-pattern>
+
+  </servlet-mapping>
+</web-app>
