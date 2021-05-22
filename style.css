@@ -1,0 +1,37 @@
+input {
+  font-size: 20px;
+  font-family: monospace;
+  margin: 15px;
+}
+button{
+  font-size: 15px;
+  background-color: blue;
+  color: white;
+  font-weight:bold;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 15px;
+}
+#login{
+
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: auto;
+  text-align: center;
+  color: white;
+  border-radius: 2px;
+  font-family: monospace;
+  float: left;
+  display: block;
+}
+.reg{
+  margin-top: 15%;
+  margin-left: 60%;
+  color: white;
+  border-radius: 2px;
+  font-family: monospace;
+  text-align: center;
+  visibility:hidden;
+}
+#register{
+  background-color: rgba(0, 0, 0, 0.3);
+}

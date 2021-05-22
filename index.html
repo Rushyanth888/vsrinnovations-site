@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login page</title>
+    <style media="screen">
+    .mb{
+margin-top:100px;
+margin-left: 250px;
+width:1000px;
+height: 550px;
+}
+.lb{
+background-image: url("lb-img.jpg");
+background-size:contain;
+width: 260px;
+height: 550px;
+float: left;
+display: block;
+
+}
+
+.lb a{
+margin-left: 20px;
+color: white;
+text-decoration: none;
+font-size: 20px;
+padding: 10px;
+}
+
+
+.rb{
+padding-left: 20px;
+color: white;
+margin-left:260px;
+background-color: black;
+width: 740px;
+height: 550px;
+font-size: 20px;
+}
+
+.rb h2{
+padding-top: 20px;
+padding-left: 20px;
+font-family:sans-serif;
+font-size: 30px;
+}
+
+
+.rb input{
+font-size: 20px;
+color: BLACK;
+border: 1px solid grey;
+font-family: monospace;
+margin: 20px;
+}
+
+
+.rb button{
+border: none;
+color: white;
+background-color: blue;
+font-size: 20px;
+font-family: monospace;
+margin: 20px;
+}
+
+.rb button:hover{
+font-size: 22px;
+}
+body h1{
+  font-family: cursive;
+  font-size: 40px;
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+
+    <h1>Travel.com</h1>
+
+    <div class="mb">
+
+
+      <div class="lb">
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+
+        <a href="#">About</a>
+        <a href="#">Dealers</a>
+
+      </div>
+
+      <div class="rb">
+
+        <h2>Sign In</h2>
+        <form  action="./loginservlet" method="post">
+          Email:
+          <br>
+        <input required type="text" name="id" value="" placeholder="Enter your id">
+        <br>
+        Password:
+        <br>
+        <input required type="password" name="pass" placeholder="Enter password" value="">
+        <br>
+        <button type="submit">sign in</button>
+      </form>
+      <h2>Don't have an account! <br>Sign Up</h2>
+
+      <a href="register.html"><button type="button" >Sign Up</button></a>
+
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,4 @@
+Create Database tourism;
+use tourism;
+CREATE TABLE logindata(userid varchar(30), pass varchar(20));
+CREATE TABLE registerdata(userid varchar(30), pass varchar(20));
