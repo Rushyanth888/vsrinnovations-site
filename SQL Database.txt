@@ -1,0 +1,11 @@
+How to create a Sql Database
+
+
+Download Sql(Oracle) Database
+then,
+
+Create Database tourism;
+use tourism;
+CREATE TABLE tourism.logindata(userid varchar(30), pass varchar(20));
+
+CREATE TABLE tourism.tourdetails(id varchar(10),f_name varchar(10),s_name varchar(10),tour_details varchar(10),Gender varchar(10),Age varchar(10));
