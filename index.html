@@ -62,6 +62,7 @@
       max-width: 600px;
     }
     nav {
+      flex-wrap: wrap;
       position: fixed;
       top: 0;
       width: 100%;
@@ -78,6 +79,7 @@
       color: #00ffff;
     }
     nav ul {
+      transition: max-height 0.4s ease;
       list-style: none;
       display: flex;
       gap: 2rem;
@@ -169,11 +171,56 @@
         transform: translateY(0);
       }
     }
+      @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav .logo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+      header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem 0;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+      }
+      section h2 {
+        font-size: 1.6rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo"><span style="font-weight: bold; font-size: 1.4rem; color: #00ffff;">VSR</span></div>
+    <div class="logo">
+      <a href="#" id="mobile-toggle" style="font-size: 1.5rem; display: none; margin-right: 1rem;">☰</a><span style="font-weight: bold; font-size: 1.4rem; color: #00ffff;">VSR</span></div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -308,5 +355,16 @@
   <script>
     AOS.init();
   </script>
+<script>
+  const toggle = document.getElementById('mobile-toggle');
+  const navLinks = document.querySelector('nav ul');
+  if (toggle) {
+    toggle.style.display = 'block';
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      navLinks.classList.toggle('active');
+    });
+  }
+</script>
 </body>
 </html>
