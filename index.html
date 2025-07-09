@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -231,10 +231,13 @@
     }
   </style>
 </head>
+<body>
 
   <nav>
     <div class="logo">
-      <a href="#" id="mobile-toggle" style="font-size: 1.5rem; display: none; margin-right: 1rem;">☰</a><span style="font-weight: bold; font-size: 1.4rem; color: #00ffff;">VSR</span></div>
+      <a href="#" id="mobile-toggle" style="font-size: 1.5rem; display: none; margin-right: 1rem;">☰</a>
+      <span style="font-weight: bold; font-size: 1.4rem; color: #00ffff;">VSR</span>
+    </div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -243,47 +246,48 @@
     </ul>
   </nav>
 
-  <a href="#contact" class="cta-button">Get In Touch</a>
+  <a href="#" class="cta-button">Get In Touch</a>
 
   <header id="home">
-  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-    <source src="https://cdn.pixabay.com/video/2020/06/09/41559-428049063_large.mp4" type="video/mp4">
-</video>
+    <video autoplay muted loop playsinline>
+      <source src="https://cdn.pixabay.com/video/2020/06/09/41559-428049063_large.mp4" type="video/mp4">
+    </video>
     <h1 data-aos="fade-down" style="font-size: 3rem; font-weight: 700;">Transforming Ideas into Digital Excellence</h1>
-    <p data-aos="fade-up" style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto; color: #ccc;">Smart tools, scalable platforms, and elegant experiences — built for startups, businesses, and visionaries like you.</p>
-  
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+    <p data-aos="fade-up" style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto; color: #ccc;">
+      Smart tools, scalable platforms, and elegant experiences — built for startups, businesses, and visionaries like you.
+    </p>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          if (!anchor.classList.contains('cta-button')) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+          }
+        });
       });
-    });
-  });
-</script>
-</header>
+    </script>
+  </header>
 
   <section id="about" style="position: relative; background: linear-gradient(to bottom, #0f1116, #1a1d24); padding: 100px 20px;">
-  <h2 data-aos="fade-up">About Us</h2>
-  <p style="text-align:center; max-width:800px; margin: auto; color: #ccc; font-size: 1.1rem; line-height: 1.8;" data-aos="fade-up">
-    VSR Innovations is a dynamic tech company driven by passion, precision, and purpose. Our team delivers intelligent, scalable solutions—from idea validation and MVP development to enterprise-grade platforms.
-  </p>
-  <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;" data-aos="fade-up" data-aos-delay="100">
-    <div style="background-color: #22252c; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);">
-      <h3 style="color: #00ffff; margin-bottom: 10px;">Mission</h3>
-      <p style="color: #aaa;">To empower startups and businesses by creating smart, accessible digital solutions.</p>
+    <h2 data-aos="fade-up">About Us</h2>
+    <p style="text-align:center; max-width:800px; margin: auto; color: #ccc; font-size: 1.1rem; line-height: 1.8;" data-aos="fade-up">
+      VSR Innovations is a dynamic tech company driven by passion, precision, and purpose. Our team delivers intelligent, scalable solutions—from idea validation and MVP development to enterprise-grade platforms.
+    </p>
+    <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;" data-aos="fade-up" data-aos-delay="100">
+      <div style="background-color: #22252c; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);">
+        <h3 style="color: #00ffff; margin-bottom: 10px;">Mission</h3>
+        <p style="color: #aaa;">To empower startups and businesses by creating smart, accessible digital solutions.</p>
+      </div>
+      <div style="background-color: #22252c; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);">
+        <h3 style="color: #00ffff; margin-bottom: 10px;">Vision</h3>
+        <p style="color: #aaa;">To be a trusted technology partner in automating, accelerating, and amplifying innovation worldwide.</p>
+      </div>
+      <div style="background-color: #22252c; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);">
+        <h3 style="color: #00ffff; margin-bottom: 10px;">Our Values</h3>
+        <p style="color: #aaa;">Integrity, creativity, collaboration, and delivering lasting impact through technology.</p>
+      </div>
     </div>
-    <div style="background-color: #22252c; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);">
-      <h3 style="color: #00ffff; margin-bottom: 10px;">Vision</h3>
-      <p style="color: #aaa;">To be a trusted technology partner in automating, accelerating, and amplifying innovation worldwide.</p>
-    </div>
-    <div style="background-color: #22252c; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);">
-      <h3 style="color: #00ffff; margin-bottom: 10px;">Our Values</h3>
-      <p style="color: #aaa;">Integrity, creativity, collaboration, and delivering lasting impact through technology.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="services">
     <h2 data-aos="fade-up">Services</h2>
@@ -322,63 +326,107 @@
   </section>
 
   <section id="portfolio">
-  <h2 data-aos="fade-up">Portfolio</h2>
-  <div class="grid">
-    <div class="card" data-aos="fade-up" data-aos-delay="100">
-      <h3>AI Assistant Platform</h3>
-      <p>Built a voice and screen-aware assistant using GPT-4, WebRTC, and Google Cloud Run. It helps users interact naturally and get real-time guidance with screen-sharing support.</p>
+    <h2 data-aos="fade-up">Portfolio</h2>
+    <div class="grid">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>AI Assistant Platform</h3>
+        <p>Built a voice and screen-aware assistant using GPT-4, WebRTC, and Google Cloud Run. It helps users interact naturally and get real-time guidance with screen-sharing support.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Chit Fund System</h3>
+        <p>Developed a secure web-based application to manage financial records, automate reminders, and maintain transparency for traditional chit fund operations.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Image Analyzer</h3>
+        <p>An AI-driven tool allowing users to upload images and receive descriptive insights using Gemini Vision API. Designed with a clean UI and deployed on Cloud Run.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="400">
+        <h3>Medical Record Digitization</h3>
+        <p>A simplified digital system for a small clinic to store, search, and update patient histories. Secured access with an intuitive interface helped streamline workflows.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="500">
+        <h3>Smart Inventory Dashboard</h3>
+        <p>Created a real-time inventory dashboard for a local store chain using Flask and Firebase. Enabled tracking, alerts, and insights from a single unified platform.</p>
+      </div>
     </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <h3>Chit Fund System</h3>
-      <p>Developed a secure web-based application to manage financial records, automate reminders, and maintain transparency for traditional chit fund operations.</p>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="300">
-      <h3>Image Analyzer</h3>
-      <p>An AI-driven tool allowing users to upload images and receive descriptive insights using Gemini Vision API. Designed with a clean UI and deployed on Cloud Run.</p>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="400">
-      <h3>Medical Record Digitization</h3>
-      <p>A simplified digital system for a small clinic to store, search, and update patient histories. Secured access with an intuitive interface helped streamline workflows.</p>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="500">
-      <h3>Smart Inventory Dashboard</h3>
-      <p>Created a real-time inventory dashboard for a local store chain using Flask and Firebase. Enabled tracking, alerts, and insights from a single unified platform.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="contact">
     <h2 data-aos="fade-up">Contact</h2>
     <p style="text-align:center;" data-aos="fade-up">Email us at <a href="mailto:info@vsrtechsolutions.com" style="color:#00ffff;">info@vsrtechsolutions.com</a></p>
   </section>
 
-  <footer>
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-    <p>&copy; 2025 VSR Innovations. All rights reserved.</p>
-    <div style="display: flex; gap: 1rem;">
-      <a href="#" style="color: #00ffff;"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/company/vsr-innovations/" target="_blank" style="color: #00ffff;"><i class="fab fa-linkedin"></i></a>
-      <a href="#" style="color: #00ffff;"><i class="fab fa-github"></i></a>
-      <a href="#" style="color: #00ffff;"><i class="fab fa-instagram"></i></a>
+  <!-- Contact Modal -->
+  <div id="contactModal" style="display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(4px); justify-content: center; align-items: center;">
+    <div style="background-color: #1a1d24; padding: 30px; border-radius: 12px; width: 90%; max-width: 500px; color: white; box-shadow: 0 0 20px rgba(0,255,255,0.3); position: relative;">
+      <h2 style="margin-bottom: 20px; color: #00ffff;">Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="firstName" placeholder="First Name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 6px; border: none;">
+        <input type="text" name="lastName" placeholder="Last Name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 6px; border: none;">
+        <textarea name="message" placeholder="Description" required rows="4" style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 6px; border: none;"></textarea>
+        <button type="submit" style="background-color: #00ffff; color: #000; font-weight: bold; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer;">Send</button>
+        <button type="button" onclick="closeModal()" style="margin-left: 10px; background: transparent; color: #ccc; border: none; cursor: pointer;">Cancel</button>
+      </form>
     </div>
-    <p style="font-size: 0.85rem; color: #666;"> VSR Innovations </p>
   </div>
-</footer>
+
+  <footer>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <p>&copy; 2025 VSR Innovations. All rights reserved.</p>
+      <div style="display: flex; gap: 1rem;">
+        <a href="#" style="color: #00ffff;"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/vsr-innovations/" target="_blank" style="color: #00ffff;"><i class="fab fa-linkedin"></i></a>
+        <a href="#" style="color: #00ffff;"><i class="fab fa-github"></i></a>
+        <a href="#" style="color: #00ffff;"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p style="font-size: 0.85rem; color: #666;"> VSR Innovations </p>
+    </div>
+  </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-<script>
-  const toggle = document.getElementById('mobile-toggle');
-  const navLinks = document.querySelector('nav ul');
-  if (toggle) {
-    toggle.style.display = 'block';
-    toggle.addEventListener('click', (e) => {
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('mobile-toggle');
+    const navLinks = document.querySelector('nav ul');
+    if (toggle) {
+      toggle.style.display = 'block';
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        navLinks.classList.toggle('active');
+      });
+    }
+
+    // Open modal on CTA click
+    document.querySelector('.cta-button').addEventListener('click', function(e) {
       e.preventDefault();
-      navLinks.classList.toggle('active');
+      document.getElementById('contactModal').style.display = 'flex';
     });
-  }
-</script>
+
+    // Close modal
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const firstName = this.firstName.value;
+      const lastName = this.lastName.value;
+      const message = this.message.value;
+
+      const subject = encodeURIComponent("New Contact from VSR Innovations");
+      const body = encodeURIComponent(
+        `First Name: ${firstName}\nLast Name: ${lastName}\nMessage:\n${message}`
+      );
+      const mailtoLink = `mailto:rushyanth@vsrtechsolutions.com?subject=${subject}&body=${body}`;
+
+      window.location.href = mailtoLink;
+      closeModal();
+    });
+  </script>
 </body>
 </html>
