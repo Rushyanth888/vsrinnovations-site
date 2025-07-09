@@ -18,7 +18,6 @@
       font-family: 'Inter', sans-serif;
       background-color: #0f1116;
       color: #ffffff;
-      scroll-behavior: smooth;
     }
     header {
       position: relative;
@@ -28,6 +27,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 1rem;
     }
     header video {
       position: absolute;
@@ -48,24 +48,22 @@
       background: rgba(0, 0, 0, 0.6);
       z-index: 0;
     }
-    header h1, header p {
-  font-size: 1rem;
-  padding: 0 1.2rem;
-  color: #ccc;
-  line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
     header h1 {
-  font-size: 2.0rem;
-  font-weight: 700;
-  padding: 0 1rem;
-  line-height: 1.3;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-}
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ccc;
+      line-height: 1.4;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
     header p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-top: 1rem;
-      max-width: 600px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ccc;
+      line-height: 1.6;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
     nav {
       flex-wrap: wrap;
@@ -78,6 +76,8 @@
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     nav .logo {
       font-size: 1.4rem;
@@ -116,6 +116,7 @@
       padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
+      animation: fadeInUp 1s ease both;
     }
     section h2 {
       font-size: 2.2rem;
@@ -158,15 +159,6 @@
       background-color: #0c0e12;
       color: #888;
     }
-      nav {
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    section {
-      animation: fadeInUp 1s ease both;
-    }
-
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -177,7 +169,7 @@
         transform: translateY(0);
       }
     }
-      @media (max-width: 768px) {
+    @media (max-width: 768px) {
       nav {
         flex-direction: column;
         align-items: flex-start;
@@ -189,12 +181,10 @@
         align-items: center;
       }
       header h1 {
-        font-size: 2rem;
-        padding: 0 1rem;
+        font-size: 1.6rem;
       }
       header p {
-        font-size: 1rem;
-        padding: 0 1rem;
+        font-size: 0.95rem;
       }
       nav ul {
         flex-direction: column;
@@ -221,7 +211,28 @@
         grid-template-columns: 1fr;
       }
     }
-  </style>
+    @media (max-width: 480px) {
+    header {
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 1.4rem;
+    }
+    header p {
+      font-size: 0.9rem;
+    }
+    nav .logo {
+      font-size: 1.2rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+    }
+    .cta-button {
+      font-size: 0.8rem;
+      padding: 8px 14px;
+    }
+  }
+</style>
 </head>
 <body>
   <nav>
