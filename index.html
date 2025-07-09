@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -24,10 +24,11 @@
       height: 100vh;
       overflow: hidden;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
     header video {
       position: absolute;
@@ -52,15 +53,13 @@
       font-size: 2.2rem;
       font-weight: 700;
       color: #ccc;
-      line-height: 1.4;
+      line-height: 1.3;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      margin-bottom: 1rem;
     }
     header p {
       font-size: 1rem;
-      margin-top: 1rem;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
       color: #ccc;
       line-height: 1.6;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -203,6 +202,8 @@
       .cta-button {
         font-size: 0.9rem;
         padding: 10px 16px;
+        bottom: 16px;
+        right: 16px;
       }
       section h2 {
         font-size: 1.6rem;
@@ -212,29 +213,25 @@
       }
     }
     @media (max-width: 480px) {
-    header {
-      padding: 2rem 1rem;
+      header {
+        padding: 3rem 1rem;
+      }
+      header h1 {
+        font-size: 1.3rem;
+        line-height: 1.4;
+      }
+      header p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      .cta-button {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+      }
     }
-    header h1 {
-      font-size: 1.4rem;
-    }
-    header p {
-      font-size: 0.9rem;
-    }
-    nav .logo {
-      font-size: 1.2rem;
-    }
-    .card p {
-      font-size: 0.9rem;
-    }
-    .cta-button {
-      font-size: 0.8rem;
-      padding: 8px 14px;
-    }
-  }
-</style>
+  </style>
 </head>
-<body>
+
   <nav>
     <div class="logo">
       <a href="#" id="mobile-toggle" style="font-size: 1.5rem; display: none; margin-right: 1rem;">☰</a><span style="font-weight: bold; font-size: 1.4rem; color: #00ffff;">VSR</span></div>
