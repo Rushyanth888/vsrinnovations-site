@@ -1,126 +1,256 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Login page</title>
-    <style media="screen">
-    .mb{
-margin-top:100px;
-margin-left: 250px;
-width:1000px;
-height: 550px;
-}
-.lb{
-background-image: url("lb-img.jpg");
-background-size:contain;
-width: 260px;
-height: 550px;
-float: left;
-display: block;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSR Innovations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f1116;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 600px;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #00ffff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    .cta-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #00ffff;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      z-index: 999;
+    }
+    .cta-button:hover {
+      background-color: #00cccc;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #00ffff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #1a1d24;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #bbbbbb;
+    }
+    .card i {
+      font-size: 2rem;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #0c0e12;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">VSR Innovations</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-}
+  <a href="#contact" class="cta-button">Get In Touch</a>
 
-.lb a{
-margin-left: 20px;
-color: white;
-text-decoration: none;
-font-size: 20px;
-padding: 10px;
-}
+  <header id="home">
+    <video autoplay muted loop>
+      <source src="https://cdn.coverr.co/videos/coverr-earth-from-space-4361/1080p.mp4" type="video/mp4">
+    </video>
+    <h1 data-aos="fade-down">Innovating the Future</h1>
+    <p data-aos="fade-up">Cutting-edge digital solutions for modern businesses — web, AI, automation, and beyond.</p>
+  </header>
 
+  <section id="about">
+    <h2 data-aos="fade-up">About Us</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;" data-aos="fade-up">We are a forward-thinking technology company focused on building tools that simplify and empower. Our mission is to deliver beautiful, functional, and intelligent digital products that help people and businesses thrive in the modern age.</p>
+  </section>
 
-.rb{
-padding-left: 20px;
-color: white;
-margin-left:260px;
-background-color: black;
-width: 740px;
-height: 550px;
-font-size: 20px;
-}
-
-.rb h2{
-padding-top: 20px;
-padding-left: 20px;
-font-family:sans-serif;
-font-size: 30px;
-}
-
-
-.rb input{
-font-size: 20px;
-color: BLACK;
-border: 1px solid grey;
-font-family: monospace;
-margin: 20px;
-}
-
-
-.rb button{
-border: none;
-color: white;
-background-color: blue;
-font-size: 20px;
-font-family: monospace;
-margin: 20px;
-}
-
-.rb button:hover{
-font-size: 22px;
-}
-body h1{
-  font-family: cursive;
-  font-size: 40px;
-  text-align: center;
-}
-    </style>
-  </head>
-  <body>
-
-    <h1>Travel.com</h1>
-
-    <div class="mb">
-
-
-      <div class="lb">
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-
-        <a href="#">About</a>
-        <a href="#">Dealers</a>
-
+  <section id="services">
+    <h2 data-aos="fade-up">Services</h2>
+    <div class="grid">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Full-stack web applications tailored for performance and usability.</p>
       </div>
-
-      <div class="rb">
-
-        <h2>Sign In</h2>
-        <form  action="./loginservlet" method="post">
-          Email:
-          <br>
-        <input required type="text" name="id" value="" placeholder="Enter your id">
-        <br>
-        Password:
-        <br>
-        <input required type="password" name="pass" placeholder="Enter password" value="">
-        <br>
-        <button type="submit">sign in</button>
-      </form>
-      <h2>Don't have an account! <br>Sign Up</h2>
-
-      <a href="register.html"><button type="button" >Sign Up</button></a>
-
-
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-robot"></i>
+        <h3>AI Assistants</h3>
+        <p>Custom GPT and Gemini-based tools for customer support and automation.</p>
       </div>
-
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-rocket"></i>
+        <h3>Startup MVPs</h3>
+        <p>Idea to product — fast, lean, and scalable minimum viable product builds.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-file-alt"></i>
+        <h3>Legacy Digitization</h3>
+        <p>Transforming Excel or paper systems into modern online platforms.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-globe"></i>
+        <h3>Professional Websites</h3>
+        <p>High-performance, mobile-friendly sites for individuals and businesses.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Deployment</h3>
+        <p>CI/CD pipelines, Google Cloud Run hosting, and HTTPS integration.</p>
+      </div>
     </div>
+  </section>
 
+  <section id="portfolio">
+  <h2 data-aos="fade-up">Portfolio</h2>
+  <div class="grid">
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <h3>AI Assistant Platform</h3>
+      <p>Built a voice and screen-aware assistant using GPT-4, WebRTC, and Google Cloud Run. It helps users interact naturally and get real-time guidance with screen-sharing support.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Chit Fund System</h3>
+      <p>Developed a secure web-based application to manage financial records, automate reminders, and maintain transparency for traditional chit fund operations.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Image Analyzer</h3>
+      <p>An AI-driven tool allowing users to upload images and receive descriptive insights using Gemini Vision API. Designed with a clean UI and deployed on Cloud Run.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <h3>Medical Record Digitization</h3>
+      <p>A simplified digital system for a small clinic to store, search, and update patient histories. Secured access with an intuitive interface helped streamline workflows.</p>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="500">
+      <h3>Smart Inventory Dashboard</h3>
+      <p>Created a real-time inventory dashboard for a local store chain using Flask and Firebase. Enabled tracking, alerts, and insights from a single unified platform.</p>
+    </div>
+  </div>
+</section>
 
+  <section id="contact">
+    <h2 data-aos="fade-up">Contact</h2>
+    <p style="text-align:center;" data-aos="fade-up">Email us at <a href="mailto:info@vsrtechsolutions.com" style="color:#00ffff;">info@vsrtechsolutions.com</a></p>
+  </section>
 
-  </body>
+  <footer>
+    <p>&copy; 2025 VSR Innovations. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
 </html>
